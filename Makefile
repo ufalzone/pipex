@@ -6,7 +6,7 @@
 #    By: ufalzone <ufalzone@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/30 18:16:42 by ufalzone          #+#    #+#              #
-#    Updated: 2025/02/07 16:58:54 by ufalzone         ###   ########.fr        #
+#    Updated: 2025/02/08 21:51:29 by ufalzone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ DEP_FILES = $(OBJ_FILES:.o=.d)
 
 # Flags de compilation
 CC = cc
-CFLAGS = -I$(INCLUDE_DIR) -g3 -MMD -MP
+CFLAGS = -I$(INCLUDE_DIR) -g3 -MMD -MP -Wall -Wextra -Werror
 
 # Librairie libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -88,4 +88,3 @@ libft_fclean:
 	@$(MAKE) -C $(LIBFT_DIR) fclean
 
 -include $(DEP_FILES)
- 
